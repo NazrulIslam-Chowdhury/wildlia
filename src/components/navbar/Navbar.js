@@ -11,16 +11,16 @@ const Navbar = () => {
                 </Link>
                 <ul className="items-stretch hidden space-x-3 lg:flex">
                     <li className="flex">
-                        <Link to='/' className="none flex items-center font-semibold border-none px-4 text-black text-lg hover:bg-green-400 rounded">Home</Link>
+                        <Link to='/' className="no-underline flex items-center font-semibold border-none px-4 text-black text-lg hover:bg-green-400 rounded">Home</Link>
                     </li>
                     <li className="flex">
-                        <Link to='/blog' className="flex items-center font-semibold px-4 text-black text-lg hover:bg-green-400 rounded">Blog</Link>
+                        <Link to='/blog' className="no-underline flex items-center font-semibold px-4 text-black text-lg hover:bg-green-400 rounded">Blog</Link>
                     </li>
 
                 </ul>
                 <div className="items-center flex-shrink-0 hidden lg:flex">
-                    <button className="self-center text-gray-900 font-semibold px-8 py-3 rounded bg-green-400">Log in</button>
-                    <button className="self-center px-8 py-3 font-semibold rounded dark:bg-green-400 dark:text-gray-900">Register</button>
+                    <button className="self-center text-gray-900 font-semibold px-8 py-3 rounded bg-green-400 hover:bg-green-600">Log in</button>
+                    <button className="self-center px-8 py-3 font-semibold rounded dark:bg-green-400 hover:bg-green-600 text-gray-900">Register</button>
                 </div>
                 <button className="p-4 lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-gray-100">
