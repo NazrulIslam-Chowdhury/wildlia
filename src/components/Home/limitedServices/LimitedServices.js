@@ -17,7 +17,7 @@ const LimitedServices = () => {
                 limitedServices.map(service =>
                     <div key={service._id} className="max-w-lg p-4 shadow-xl shadow-black bg-green-200 text-gray-900 rounded">
                         <div className="flex justify-between pb-4 border-bottom">
-                            <Link className='no-underline text-green-900 font-semibold' to=''>See Detail</Link>
+                            <Link className='no-underline text-green-900 font-semibold' to={`/detail/${service._id}`}>See Detail</Link>
                         </div>
                         <div className="space-y-4">
                             <div className="space-y-2">
@@ -32,7 +32,7 @@ const LimitedServices = () => {
 
                                 </h3>
 
-                                <p className="leading-snug text-gray-600 font-semibold">{service.location_details.slice(0, 100) + '...'} <span><Link to='' className='no-underline text-green-900'>See More</Link></span></p>
+                                <p className="leading-snug text-gray-600 font-semibold">{service.location_details.slice(0, 100) + '...'} <span><Link to={`/detail/${service._id}`} className='no-underline text-green-900'>See More</Link></span></p>
                             </div>
                         </div>
                     </div>
