@@ -14,7 +14,7 @@ const Banner = () => {
                     <div className='carousel-img'>
                         <CImage className="d-block h-96  w-100  " src="https://upload.wikimedia.org/wikipedia/commons/2/23/Sundarban_Tiger.jpg" alt="slide 1" />
                     </div>
-                    <CCarouselCaption className="d-none d-md-block">
+                    <CCarouselCaption>
                         <div>
                             <h1 className='text-4xl font-bold text-green-600'> <span className='text-7xl'>W</span>ildlia</h1>
                             <p className='text-lg font-bold'>Run into the wild with <span>Wildlia.</span></p>
@@ -28,7 +28,7 @@ const Banner = () => {
                     <div className='carousel-img'>
                         <CImage className="carousel-img d-block h-96 w-100" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Bhawal_National_Park_02.jpg" alt="slide 2" />
                     </div>
-                    <CCarouselCaption className="d-none d-md-block">
+                    <CCarouselCaption>
                         <div>
                             <h1 className='text-4xl font-bold text-green-600'> <span className='text-7xl'>W</span>ildlia</h1>
                             <p className='text-lg font-bold'>Run into the wild with <span>Wildlia.</span></p>
@@ -42,7 +42,7 @@ const Banner = () => {
                     <div className='carousel-img'>
                         <CImage className="carousel-img d-block h-96 w-100" src="https://www.lostwithpurpose.com/wp-content/uploads/2018/03/DSC04371.jpg" alt="slide 3" />
                     </div>
-                    <CCarouselCaption className="d-none d-md-block">
+                    <CCarouselCaption>
                         <div>
                             <h1 className='text-4xl font-bold text-green-600'> <span className='text-7xl'>W</span>ildlia</h1>
                             <p className='text-lg font-bold'>Run into the wild with <span>Wildlia.</span></p>
