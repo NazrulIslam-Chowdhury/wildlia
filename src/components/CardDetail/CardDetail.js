@@ -38,7 +38,7 @@ const CardDetail = () => {
                         <img className='h-16 w-16 rounded-full' src={guidImg} alt="" />
                         <div className='ml-5'>
                             <p className='text-lg'>Nazrul Islam Chowdhury</p>
-                            <small>Professional tour guid</small>
+                            <small>Professional tour guide</small>
                         </div>
                     </div>
                 </div>
