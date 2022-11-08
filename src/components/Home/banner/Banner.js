@@ -16,11 +16,11 @@ const Banner = () => {
                     </div>
                     <CCarouselCaption>
                         <div>
-                            <h1 className='text-4xl font-bold text-green-600'> <span className='text-7xl'>W</span>ildlia</h1>
+                            <h1 className='text-4xl font-bold text-green-400'> <span className='text-7xl'>W</span>ildlia</h1>
                             <p className='text-lg font-bold'>Run into the wild with <span>Wildlia.</span></p>
                             <p className='text-lg font-bold'>Run into the wild with <span className='font-bold text-5xl'>Nazrul.</span></p>
                             <p className='text-lg font-bold'>Your tour companion.</p>
-                            <button type="button" className="px-8 py-3 font-semibold rounded bg-green-800">Contact Now</button>
+                            <button type="button" className="px-8 py-3 font-semibold rounded bg-green-400 hover:bg-green-600">Contact Now</button>
                         </div>
                     </CCarouselCaption>
                 </CCarouselItem>
@@ -34,7 +34,7 @@ const Banner = () => {
                             <p className='text-lg font-bold'>Run into the wild with <span>Wildlia.</span></p>
                             <p className='text-lg font-bold'>Run into the wild with <span className='font-bold text-5xl'>Nazrul.</span></p>
                             <p className='text-lg font-bold'>Your tour companion.</p>
-                            <button type="button" className="px-8 py-3 font-semibold rounded bg-green-800">Contact Now</button>
+                            <button type="button" className="px-8 py-3 font-semibold rounded bg-green-400 hover:bg-green-600">Contact Now</button>
                         </div>
                     </CCarouselCaption>
                 </CCarouselItem>
@@ -48,7 +48,7 @@ const Banner = () => {
                             <p className='text-lg font-bold'>Run into the wild with <span>Wildlia.</span></p>
                             <p className='text-lg font-bold'>Run into the wild with <span className='font-bold text-5xl'>Nazrul.</span></p>
                             <p className='text-lg font-bold'>Your tour companion.</p>
-                            <button type="button" className="px-8 py-3 font-semibold rounded bg-green-800">Contact Now</button>
+                            <button type="button" className="px-8 py-3 font-semibold rounded bg-green-400 hover:bg-green-600">Contact Now</button>
                         </div>
                     </CCarouselCaption>
                 </CCarouselItem>

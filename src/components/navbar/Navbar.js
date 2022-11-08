@@ -7,11 +7,11 @@ const Navbar = () => {
         <header className="p-4 bg-green-200 text-gray-100">
             <div className="container flex justify-between h-16 mx-auto">
                 <Link rel="noopener noreferrer" to='/' aria-label="Back to homepage" className="flex items-center p-2">
-                    <img className='h-36 w-36' src={logo} alt="" />
+                    <img className='w-28 h-28 rounded-full bg-green-300' src={logo} alt="" />
                 </Link>
                 <ul className="items-stretch hidden space-x-3 lg:flex">
                     <li className="flex">
-                        <Link to='/' className="flex items-center font-semibold border-none px-4 text-black text-lg hover:bg-green-400 rounded">Home</Link>
+                        <Link to='/' className="none flex items-center font-semibold border-none px-4 text-black text-lg hover:bg-green-400 rounded">Home</Link>
                     </li>
                     <li className="flex">
                         <Link to='/blog' className="flex items-center font-semibold px-4 text-black text-lg hover:bg-green-400 rounded">Blog</Link>
