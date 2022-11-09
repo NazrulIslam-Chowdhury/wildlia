@@ -2,12 +2,13 @@ import React from 'react';
 import { FaStar, FaStarHalf } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
 import guidImg from '../../assets/20180906_223635.jpg';
+import useTitle from '../../hooks/useTitle';
 
 const CardDetail = () => {
     const detail = useLoaderData();
-    console.log(detail)
     const { img, title, price, service_duration, location_details
     } = detail;
+    useTitle('Detail');
 
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-x-7 sm:gap-y-8'>

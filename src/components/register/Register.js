@@ -4,12 +4,14 @@ import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import signInImg from '../../assets/login.png';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
     const { createUserWithEmailAndPass, createUserWithGoogle } = useContext(AuthContext);
     const { error, setError } = useState('');
     const navigate = useNavigate();
     const location = useLocation();
+    useTitle('Register');
 
     const from = location.state?.from?.pathname || '/'
 

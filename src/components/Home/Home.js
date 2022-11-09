@@ -1,11 +1,13 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 import Banner from './banner/Banner';
 import LimitedServices from './limitedServices/LimitedServices';
 import MiddleSection from './middleSection/MiddleSection';
 
 const Home = () => {
+    useTitle('Home');
     return (
         <div className='text-center'>
             <Banner></Banner>
