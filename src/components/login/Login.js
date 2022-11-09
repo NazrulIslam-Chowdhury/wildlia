@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import loginImg from '../../assets/login.png';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
+    const { logIn, createUserWithGoogle } = useContext(AuthContext);
+    const { error, setError } = useState('');
+
     const handleLoginOnSubmit = event => {
         event.preventDefault();
 
@@ -11,6 +16,29 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+        logIn(email, password)
+            .then(result => {
+                const user = result.user;
+                toast.success('Login successfully');
+                console.log(user)
+            })
+            .catch(error => {
+                setError(error.message);
+                toast.error(error);
+            })
+    }
+
+    const loginWithGoogle = () => {
+        createUserWithGoogle()
+            .then(result => {
+                const user = result.user;
+                toast.success('Login successfully');
+                console.log(user);
+            })
+            .catch(error => {
+                setError(error.message);
+                toast.error(error);
+            })
     }
 
     return (
@@ -30,6 +58,7 @@ const Login = () => {
                         </div>
                     </div>
                     <button className="block w-full p-3 text-center rounded-sm text-lg font-bold text-gray-900 bg-green-500 hover:bg-green-600">Sign in</button>
+                    <Toaster />
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
@@ -38,12 +67,13 @@ const Login = () => {
                 </div>
                 <div className="flex justify-center space-x-4">
                     <button aria-label="Log in with Google" className="p-3 rounded-sm">
-                        <FaGoogle />
+                        <FaGoogle onClick={loginWithGoogle} />
                     </button>
                     <button aria-label="Log in with Facebook" className="p-3 rounded-sm">
                         <FaFacebook />
                     </button>
                 </div>
+                <p className='text-2xl text-red-900 font-bold'>{error}</p>
                 <p className="text-xs font-bold text-center sm:px-6 text-gray-800">Don't have an account ?
                     <Link to='/register' className="no-underline text-green-900 font-bold text-base"> Register Now</Link>
                 </p>

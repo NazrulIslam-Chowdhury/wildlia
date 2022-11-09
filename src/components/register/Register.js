@@ -7,7 +7,7 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Register = () => {
     const { createUserWithEmailAndPass, createUserWithGoogle } = useContext(AuthContext);
-    const [error, setError] = useState('');
+    const { error, setError } = useState('');
 
     const handleSignUpOnSubmit = event => {
         event.preventDefault();
@@ -96,6 +96,7 @@ const Register = () => {
                         <FaFacebook />
                     </button>
                 </div>
+                <p className='text-2xl text-red-900 font-bold'>{error}</p>
                 <p className="text-xs font-bold text-center sm:px-6 text-gray-800">Already have an account ?
                     <Link to='/login' className="no-underline text-green-900 font-bold text-base"> Login Now</Link>
                 </p>
