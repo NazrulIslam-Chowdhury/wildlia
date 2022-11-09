@@ -1,4 +1,5 @@
 import React from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import signInImg from '../../assets/login.png';
@@ -8,9 +9,16 @@ const Register = () => {
         event.preventDefault();
 
         const form = event.target;
+        const name = form.name.value;
+        const url = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        const confirmPass = form.confirm.value;
+        if (confirmPass !== password) {
+            toast.error('Password did not match');
+            return;
+        }
+        console.log(name, url, email, password);
     }
 
     return (
@@ -44,6 +52,7 @@ const Register = () => {
 
                     </div>
                     <button className="block w-full p-3 text-center rounded-sm text-lg font-bold text-gray-900 bg-green-500 hover:bg-green-600">Sign in</button>
+                    <Toaster />
                 </form>
                 <div className="flex items-center pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
