@@ -1,13 +1,19 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 import Banner from './banner/Banner';
 import LimitedServices from './limitedServices/LimitedServices';
 import MiddleSection from './middleSection/MiddleSection';
 
 const Home = () => {
+    const { loading } = useContext(AuthContext);
     useTitle('Home');
+
+    if (loading) {
+        return <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-green-600 font-bold ml-96"></div>
+    }
     return (
         <div className='text-center'>
             <Banner></Banner>

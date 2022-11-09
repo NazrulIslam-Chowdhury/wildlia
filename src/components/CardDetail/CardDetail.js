@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaStar, FaStarHalf } from 'react-icons/fa';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import guidImg from '../../assets/20180906_223635.jpg';
 import useTitle from '../../hooks/useTitle';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import ReviewSection from '../reviewSection/ReviewSection';
 
 const CardDetail = () => {
+    const { user, loading } = useContext(AuthContext);
     const detail = useLoaderData();
     const { img, title, price, service_duration, location_details
     } = detail;
     useTitle('Detail');
+
+    if (loading) {
+        return <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-green-600 font-bold ml-96"></div>
+    }
 
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-x-7 sm:gap-y-8'>
@@ -57,6 +64,17 @@ const CardDetail = () => {
                     }</p>
                 </div>
             </div>
+            <ReviewSection></ReviewSection>
+            {
+                user?.uid ?
+                    <button className="bg-green-400  hover:bg-green-600 py-2 rounded "><Link className='no-underline font-semibold px-4 text-black text-lg' to='/add-review' active>
+                        Add a review
+                    </Link></button>
+                    :
+                    <button className="bg-green-400  hover:bg-green-600 py-2 rounded "><Link className='no-underline font-semibold px-4 text-black text-lg' to='/login' active>
+                        Login to add a review
+                    </Link></button>
+            }
         </div>
     );
 };

@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Services = () => {
+    const { loading } = useContext(AuthContext);
     const [allService, setAllService] = useState([]);
     useTitle('Services');
     useEffect(() => {
@@ -12,6 +14,10 @@ const Services = () => {
             .then(res => res.json())
             .then(data => setAllService(data))
     }, [])
+
+    if (loading) {
+        return <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-green-600 font-bold ml-96"></div>
+    }
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>
             {
