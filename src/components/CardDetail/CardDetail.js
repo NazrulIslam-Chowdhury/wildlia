@@ -3,6 +3,8 @@ import { FaStar, FaStarHalf } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
 import guidImg from '../../assets/20180906_223635.jpg';
 import useTitle from '../../hooks/useTitle';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const CardDetail = () => {
     const detail = useLoaderData();
@@ -18,7 +20,11 @@ const CardDetail = () => {
 
                     <div className="space-y-4">
                         <div className="space-y-2">
-                            <img src={img} alt="" className=" block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
+                            <PhotoProvider>
+                                <PhotoView src={img}>
+                                    <img src={img} alt="" className=" block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
+                                </PhotoView>
+                            </PhotoProvider>
                         </div>
                         <div className="space-y-2">
                             <h3 className="text-2xl font-semibold text-green-800">{title}

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const Services = () => {
     const [allService, setAllService] = useState([]);
@@ -20,7 +22,11 @@ const Services = () => {
                         </div>
                         <div className="space-y-4">
                             <div className="space-y-2">
-                                <img src={srv.img} alt="" className=" block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
+                                <PhotoProvider>
+                                    <PhotoView src={srv.img}>
+                                        <img src={srv.img} alt="" className=" block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
+                                    </PhotoView>
+                                </PhotoProvider>
                                 <div className="flex items-center text-xs">
                                     <span>6 min ago</span>
                                 </div>
