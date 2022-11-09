@@ -1,4 +1,4 @@
-import { CCollapse, CContainer, CNavbar, CNavbarBrand, CNavbarNav, CNavbarToggler, CNavItem, CNavLink } from '@coreui/react';
+import { CCollapse, CContainer, CNavbar, CNavbarBrand, CNavbarNav, CNavbarToggler, CNavItem } from '@coreui/react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
@@ -6,29 +6,6 @@ import logo from '../../assets/logo.png';
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
     return (
-        // <header className="">
-        //     <div className="container flex justify-between h-16 mx-auto">
-        //         
-        //         <ul className="items-stretch hidden space-x-3 lg:flex">
-        //             <li className="flex">
-        //                 <Link to='/' className="no-underline flex items-center font-semibold border-none px-4 text-black text-lg hover:bg-green-400 rounded">Home</Link>
-        //             </li>
-        //             <li className="flex">
-        //                 <Link to='/blog' className="no-underline flex items-center ">Blog</Link>
-        //             </li>
-
-        //         </ul>
-        //         <div className="items-center flex-shrink-0 hidden lg:flex">
-        //             
-        //             <button className="self-center px-8 py-3 font-semibold rounded dark:bg-green-400 hover:bg-green-600 text-gray-900">Register</button>
-        //         </div>
-        //         <button className="p-4 lg:hidden">
-        //             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-gray-100">
-        //                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        //             </svg>
-        //         </button>
-        //     </div>
-        // </header>
         <div>
             <CNavbar expand="lg" colorScheme="light" className="p-4 bg-green-200 text-gray-100">
                 <CContainer fluid>

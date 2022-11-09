@@ -8,7 +8,7 @@ import '@coreui/coreui/dist/css/coreui.min.css'
 const Banner = () => {
     return (
 
-        <div className=''>
+        <div>
             <CCarousel controls indicators>
                 <CCarouselItem className='h-96'>
                     <div className='carousel-img'>
