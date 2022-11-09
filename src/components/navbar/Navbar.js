@@ -1,10 +1,23 @@
-import { CCollapse, CContainer, CNavbar, CNavbarBrand, CNavbarNav, CNavbarToggler, CNavItem } from '@coreui/react';
-import React, { useState } from 'react';
+import { CCollapse, CContainer, CNavbar, CNavbarNav, CNavbarToggler, CNavItem } from '@coreui/react';
+import React, { useContext, useState } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
     const [visible, setVisible] = useState(false);
+
+    const logOutOnClick = () => {
+        logOut()
+            .then(() => {
+                toast.success('Log-out successfully')
+            })
+            .catch(error => {
+                toast.error(error)
+            })
+    }
     return (
         <div>
             <CNavbar expand="lg" colorScheme="light" className="p-4 bg-green-200 text-gray-100">
@@ -32,15 +45,31 @@ const Navbar = () => {
                                 <Link className='no-underline  cursor-pointer font-semibold py-2 px-4 text-black text-lg hover:bg-green-400 rounded' to='/services' active>Services</Link>
                             </CNavItem>
                             <CNavItem>
-                                <button className="bg-green-400  hover:bg-green-600 py-2 rounded "><Link className='no-underline font-semibold px-4 text-black text-lg' to='/login' active>
-                                    Login
-                                </Link></button>
+
+                                {
+                                    user?.uid ?
+                                        <>
+                                            <Link className='no-underline  cursor-pointer font-semibold py-2 px-4 text-black text-lg hover:bg-green-400 rounded' to='/blog' active>My Reviews</Link>
+
+                                            <Link className='no-underline  cursor-pointer font-semibold py-2 px-4 text-black text-lg hover:bg-green-400 rounded' to='/blog' active>Add Service</Link>
+                                            <button onClick={logOutOnClick} className="bg-green-400  hover:bg-green-600 py-2 font-semibold px-4 text-black text-lg rounded">Log Out</button>
+
+
+                                        </>
+                                        :
+                                        <button className="bg-green-400  hover:bg-green-600 py-2 rounded "><Link className='no-underline font-semibold px-4 text-black text-lg' to='/login' active>
+                                            Login
+                                        </Link></button>
+
+                                }
 
                             </CNavItem>
                         </CNavbarNav>
                     </CCollapse>
                 </CContainer>
+                <img src={user?.photoURL} className='h-16 w-16 rounded-full' alt="" />
             </CNavbar>
+
         </div>
     );
 };
