@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import signInImg from '../../assets/login.png';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Register = () => {
+    const { createUserWithEmailAndPass, createUserWithGoogle } = useContext(AuthContext);
+    const [error, setError] = useState('');
+
     const handleSignUpOnSubmit = event => {
         event.preventDefault();
 
@@ -19,6 +23,31 @@ const Register = () => {
             return;
         }
         console.log(name, url, email, password);
+        createUserWithEmailAndPass(email, password, name, url)
+            .then(result => {
+                const user = result.user;
+                toast.success('Sign-up successful');
+                console.log(user);
+            })
+            .then(error => {
+                setError(error.message);
+                toast.error(error);
+                console.error(error.message);
+
+            })
+    }
+
+    const createUserWithGoogleOnClick = () => {
+        createUserWithGoogle()
+            .then(result => {
+                const user = result.user;
+                toast.success('Sign-up successful');
+                console.log(user)
+            })
+            .catch(error => {
+                setError(error.message);
+                toast.error(error);
+            })
     }
 
     return (
@@ -61,7 +90,7 @@ const Register = () => {
                 </div>
                 <div className="flex justify-center space-x-4">
                     <button aria-label="Log in with Google" className="p-3 rounded-sm">
-                        <FaGoogle />
+                        <FaGoogle onClick={createUserWithGoogleOnClick} />
                     </button>
                     <button aria-label="Log in with Facebook" className="p-3 rounded-sm">
                         <FaFacebook />
