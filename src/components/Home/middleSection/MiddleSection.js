@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 const MiddleSection = () => {
     return (
         <div>
-            <div className="dark:bg-green-400 dark:text-gray-50 rounded">
-                <div className="container grid grid-cols-12 mx-auto dark:bg-gray-900">
-                    <div className="bg-no-repeat bg-cover dark:bg-gray-700 col-span-full lg:col-span-4" style={{ backgroundImage: " url('https://source.unsplash.com/random/640x480')", backgroundPosition: "center center", backgroundBlendMode: "multiply", backgroundSize: "cover" }}></div>
+            <div className="bg-green-400 text-gray-50 rounded">
+                <div className="container grid grid-cols-12 mx-auto bg-gray-900">
+                    <div className="bg-no-repeat bg-cover col-span-full lg:col-span-4" style={{ backgroundImage: " url('https://images.pexels.com/photos/590178/pexels-photo-590178.jpeg?auto=compress&cs=tinysrgb&w=600')", backgroundPosition: "center center", backgroundBlendMode: "multiply", backgroundSize: "cover" }}></div>
                     <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
 
-                        <h1 className="text-3xl font-semibold">Lorem ipsum dolor sit.</h1>
-                        <p className="flex-1 pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, reprehenderit adipisci tempore voluptas laborum quod.</p>
+                        <h1 className="text-3xl font-semibold">Be generous like Ocean</h1>
+                        <p className="flex-1 pt-2"> <b>Underwater</b> photography is the process of taking photographs while under water. It is usually done while scuba diving, but can be done while diving on surface supply, snorkeling, swimming, from a submersible or remotely operated underwater vehicle, or from automated cameras lowered from the surface.</p>
                         <Link rel="noopener noreferrer" to='' className="no-underline inline-flex items-center pt-2 pb-6 space-x-2 text-sm dark:text-violet-400">
                             <span>Read more</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
@@ -29,26 +29,26 @@ const MiddleSection = () => {
                 </div>
             </div>
 
-            <div className="dark:bg-green-400 dark:text-gray-100 mt-5 rounded">
+            <div className="bg-green-400 text-gray-100 mt-5 rounded">
                 <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-                    <div className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900">
-                        <img src="https://source.unsplash.com/random/480x360" alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
+                    <div className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-gray-900">
+                        <img src="https://images.iphonephotographyschool.com/20660/1120/forest-photography-29.jpg" alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
                         <div className="p-6 space-y-2 lg:col-span-5">
-                            <h3 className="text-2xl font-semibold sm:text-4xl">Noster tincidunt reprimique ad pro</h3>
-                            <span className="text-xs dark:text-gray-400">February 19, 2021</span>
-                            <p>Ei delenit sensibus liberavisse pri. Quod suscipit no nam. Est in graece fuisset, eos affert putent doctus id.</p>
+                            <h3 className="text-2xl font-semibold sm:text-4xl">Find peace in Nature</h3>
+                            <span className="text-xs text-gray-400">February 19, 2021</span>
+                            <p>Like landscape photography, capturing pictures of a forest takes you out of your fast-paced world and forces you to slow down. You get to see the natural beauty </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="dark:bg-green-400 dark:text-gray-50 mt-5 rounded">
-                <div className="container grid grid-cols-12 mx-auto dark:bg-gray-900">
-                    <div className="bg-no-repeat bg-cover dark:bg-gray-700 col-span-full lg:col-span-4" style={{ backgroundImage: " url('https://source.unsplash.com/random/640x480')", backgroundPosition: "center center", backgroundBlendMode: "multiply", backgroundSize: "cover" }}></div>
+            <div className="bg-green-400 text-gray-50 mt-5 rounded">
+                <div className="container grid grid-cols-12 mx-auto bg-gray-900">
+                    <div className="bg-no-repeat bg-cover col-span-full lg:col-span-4" style={{ backgroundImage: " url('https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&w=600')", backgroundPosition: "center center", backgroundBlendMode: "multiply", backgroundSize: "cover" }}></div>
                     <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
-                        <h1 className="text-3xl font-semibold">Lorem ipsum dolor sit.</h1>
-                        <p className="flex-1 pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, reprehenderit adipisci tempore voluptas laborum quod.</p>
-                        <Link rel="noopener noreferrer" to='' className="no-underline inline-flex items-center pt-2 pb-6 space-x-2 text-sm dark:text-violet-400">
+                        <h1 className="text-3xl font-semibold">Amazing wildlife animals</h1>
+                        <p className="flex-1 pt-2">Wildlife photography is a genre of photography concerned with documenting various forms of wildlife in their natural habitat. As well as requiring photography skills, wildlife photographers may need field craft skills.</p>
+                        <Link rel="noopener noreferrer" to='' className="no-underline inline-flex items-center pt-2 pb-6 space-x-2 text-sm text-violet-400">
                             <span>Read more</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                                 <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
