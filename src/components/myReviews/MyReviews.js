@@ -10,7 +10,6 @@ const MyReviews = () => {
     const [userReviews, setUserReview] = useState([]);
     useTitle('My-reviews');
 
-    console.log(userReviews)
     useEffect(() => {
         fetch(`https://wildlia-server.vercel.app/reviews?email=${user?.email}`)
             .then(res => res.json())

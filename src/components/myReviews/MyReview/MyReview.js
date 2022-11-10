@@ -1,10 +1,11 @@
+
 import React, { useContext } from 'react';
 
 import { FaTrashAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 const MyReview = ({ review, deleteOnClick }) => {
     const { user, loading } = useContext(AuthContext);
-    console.log(user)
     const { _id, userImg, name, email, comment } = review;
     if (loading) {
         return <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-green-600 font-bold ml-96"></div>
@@ -35,7 +36,9 @@ const MyReview = ({ review, deleteOnClick }) => {
                 <p>{comment}</p>
             </div>
             <div className='flex justify-between mt-5'>
-                <button className='bg-green-200 hover:bg-green-400 py-2 px-4 text-black text-lg font-bold rounded'>Edit review</button>
+                <Link className='no-underline' to={`/modal/:${_id}`}>
+                    <button className='bg-green-200 hover:bg-green-400 py-2 px-4 text-black text-lg font-bold rounded'>Edit review</button>
+                </Link>
                 <button onClick={() => deleteOnClick(_id)} className='hover:bg-green-300 rounded-full text-red-500 p-2 h-8 w-8'><FaTrashAlt /></button>
             </div>
 

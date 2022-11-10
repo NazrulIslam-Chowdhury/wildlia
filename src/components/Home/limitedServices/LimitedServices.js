@@ -40,6 +40,7 @@ const LimitedServices = () => {
                                 </h3>
 
                                 <p className="leading-snug text-gray-600 font-semibold">{service.location_details.slice(0, 100) + '...'} <span><Link to={`/detail/${service._id}`} className='no-underline text-green-900'>See More</Link></span></p>
+                                <p>price: ${service.price}</p>
                             </div>
                         </div>
                     </div>

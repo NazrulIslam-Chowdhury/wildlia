@@ -6,7 +6,7 @@ import useTitle from '../../hooks/useTitle';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
-import ReviewSection from '../reviewSection/ReviewSection';
+
 
 const CardDetail = () => {
     const { user, loading } = useContext(AuthContext);
@@ -75,7 +75,7 @@ const CardDetail = () => {
                             location_details}</p>
                     </div>
                 </div>
-                <ReviewSection></ReviewSection>
+
                 {
                     user?.uid ?
                         <button className="bg-green-400  hover:bg-green-600 py-2 rounded "><Link className='no-underline font-semibold px-4 text-black text-lg' to='/add-review' active>
