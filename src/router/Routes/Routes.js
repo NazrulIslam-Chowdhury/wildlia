@@ -9,6 +9,7 @@ import MyReviews from "../../components/myReviews/MyReviews";
 import Register from "../../components/register/Register";
 import Services from "../../components/Services/Services";
 import Main from "../../layouts/Main";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/detail/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`),
+                loader: ({ params }) => fetch(`https://wildlia-server.vercel.app/services/${params.id}`),
                 element: <CardDetail></CardDetail>
             },
             {
@@ -38,11 +39,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/my-reviews',
-                element: <MyReviews></MyReviews>
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
             },
             {
                 path: '/add-service',
-                element: <AddService></AddService>
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
             },
             {
                 path: '/blog',
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/add-review',
-                element: <AddReview></AddReview>
+                element: <PrivateRoute><AddReview></AddReview></PrivateRoute>
             },
             {
                 path: '*',

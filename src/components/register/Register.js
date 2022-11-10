@@ -34,7 +34,7 @@ const Register = () => {
                 const user = result.user;
                 toast.success('Sign-up successful');
                 navigate(from, { replace: true });
-                console.log(user);
+                form.reset();
             })
             .then(error => {
                 setError(error.message);

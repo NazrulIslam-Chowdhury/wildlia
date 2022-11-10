@@ -8,7 +8,7 @@ const LimitedServices = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/services-limit')
+        fetch('https://wildlia-server.vercel.app/services-limit')
             .then(res => res.json())
             .then(data => setLimitedServices(data))
     }, [])

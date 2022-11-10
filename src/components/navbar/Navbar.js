@@ -49,9 +49,9 @@ const Navbar = () => {
                                 {
                                     user?.uid ?
                                         <>
-                                            <Link className='no-underline  cursor-pointer font-semibold py-2 px-4 text-black text-lg hover:bg-green-400 rounded' to='/blog' active>My Reviews</Link>
+                                            <Link className='no-underline  cursor-pointer font-semibold py-2 px-4 text-black text-lg hover:bg-green-400 rounded' to='/my-reviews' active>My Reviews</Link>
 
-                                            <Link className='no-underline  cursor-pointer font-semibold py-2 px-4 text-black text-lg hover:bg-green-400 rounded' to='/blog' active>Add Service</Link>
+                                            <Link className='no-underline  cursor-pointer font-semibold py-2 px-4 text-black text-lg hover:bg-green-400 rounded' to='/add-service' active>Add Service</Link>
                                             <button onClick={logOutOnClick} className="bg-green-400  hover:bg-green-600 py-2 font-semibold px-4 text-black text-lg rounded">Log Out</button>
 
 

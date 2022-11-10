@@ -10,7 +10,7 @@ const Services = () => {
     const [allService, setAllService] = useState([]);
     useTitle('Services');
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://wildlia-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setAllService(data))
     }, [])

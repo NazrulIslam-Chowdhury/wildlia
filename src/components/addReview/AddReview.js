@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { FaSmile } from 'react-icons/fa';
+
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 
 const AddReview = () => {
     const { user, loading } = useContext(AuthContext);
-    useTitle();
+    useTitle('Add-review');
 
     const addReviewOnSubmit = event => {
         event.preventDefault();
@@ -15,7 +16,6 @@ const AddReview = () => {
         const name = form.name.value;
         const email = user?.email || 'unregistered';
         const comment = form.comment.value;
-        console.log(name, email, comment);
 
         const review = {
             name,
@@ -23,7 +23,7 @@ const AddReview = () => {
             email,
             comment
         }
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://wildlia-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
