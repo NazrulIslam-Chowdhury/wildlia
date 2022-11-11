@@ -69,7 +69,7 @@ const CardDetail = () => {
                     </div>
                 </div>
 
-                <div className=' col-span-2'>
+                <div className='mt-5 col-span-2'>
                     <div>
                         <p>{
                             location_details}</p>
@@ -82,7 +82,7 @@ const CardDetail = () => {
                             Add a review
                         </Link></button>
                         :
-                        <button className="bg-green-400  hover:bg-green-600 py-2 rounded "><Link className='no-underline font-semibold px-4 text-black text-lg' to='/login' active>
+                        <button className="bg-green-400  hover:bg-green-600 py-2 rounded "><Link className='no-underline font-semibold px-4 text-black text-lg' to='/add-review' active>
                             Login to add a review
                         </Link></button>
                 }

@@ -12,7 +12,7 @@ const MyReview = ({ review, deleteOnClick }) => {
     }
 
     return (
-        <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 bg-gray-900 text-gray-100 shadow-md shadow-black">
+        <div className="container flex flex-col w-auto max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 bg-gray-900 text-gray-100 shadow-md shadow-black">
             <div className="flex justify-between p-4">
                 <div className="flex space-x-4">
                     <div>
@@ -32,8 +32,8 @@ const MyReview = ({ review, deleteOnClick }) => {
                     <span className="text-xl font-bold">4.5</span>
                 </div>
             </div>
-            <div className="p-4 space-y-2 text-sm text-gray-400">
-                <p>{comment}</p>
+            <div className="p-4 space-y-2 flex-wrap text-sm text-gray-400">
+                <p>{comment.slice(1, 30) + '...'}Read more</p>
             </div>
             <div className='flex justify-between mt-5'>
                 <Link className='no-underline' to={`/modal/:${_id}`}>

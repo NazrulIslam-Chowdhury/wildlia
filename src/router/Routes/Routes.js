@@ -56,7 +56,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/modal/:id',
-                // loader: ({ id }) => fetch(`https://wildlia-server.vercel.app/reviews/${id}`),
+                // loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`),
                 element: <Modal></Modal>
             },
             {
