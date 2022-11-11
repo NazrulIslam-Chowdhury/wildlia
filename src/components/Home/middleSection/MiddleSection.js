@@ -5,7 +5,7 @@ const MiddleSection = () => {
     return (
         <div>
             <div className="bg-green-400 text-gray-50 rounded">
-                <div className="container grid grid-cols-12 mx-auto bg-gray-900">
+                <div className="container grid grid-cols-12  mx-auto bg-gray-900">
                     <div className="bg-no-repeat bg-cover col-span-full lg:col-span-4" style={{ backgroundImage: " url('https://images.pexels.com/photos/590178/pexels-photo-590178.jpeg?auto=compress&cs=tinysrgb&w=600')", backgroundPosition: "center center", backgroundBlendMode: "multiply", backgroundSize: "cover" }}></div>
                     <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
 

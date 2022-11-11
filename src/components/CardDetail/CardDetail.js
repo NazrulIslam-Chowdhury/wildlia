@@ -91,7 +91,7 @@ const CardDetail = () => {
 
             {
                 user?.uid ?
-                    <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 bg-green-200 p-8 rounded mt-5'>
+                    <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5  p-8 rounded mt-5'>
                         {
                             reviews.map(review =>
                                 <div key={review._id} className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 bg-gray-900 text-gray-100 shadow-md shadow-black">

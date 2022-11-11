@@ -66,8 +66,15 @@ const Navbar = () => {
                             </CNavItem>
                         </CNavbarNav>
                     </CCollapse>
+                    <div
+                        className='flex'>
+                        <img src={user?.photoURL} className='h-16 w-16 rounded-full' alt="" />
+                        <div className='ml-2 text-black h-6'>
+                            <p>{user?.displayName}</p>
+                            <p>{user?.email}</p>
+                        </div>
+                    </div>
                 </CContainer>
-                <img src={user?.photoURL} className='h-16 w-16 rounded-full' alt="" />
             </CNavbar>
 
         </div>

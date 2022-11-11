@@ -59,15 +59,15 @@ const Footer = () => {
                     </div>
                     <div className="space-y-3">
                         <div className="uppercase text-gray-400">Social media</div>
-                        <div className="flex justify-start space-x-3">
+                        <div className="flex justify-start space-x-2">
                             <Link to="" title="Facebook" className="no-underline flex items-center p-1">
-                                <FaFacebook className='h-16 w-16 text-green-400' />
+                                <FaFacebook className='h-10 w-10 text-green-400' />
                             </Link>
                             <Link to="" title="Twitter" className="no-underline flex items-center p-1">
-                                <FaTwitter className='h-16 w-16 text-green-400' />
+                                <FaTwitter className='h-10 w-10 text-green-400' />
                             </Link>
                             <Link to="" title="Instagram" className="no-underline flex items-center p-1">
-                                <FaInstagram className='h-16 w-16 text-green-400' />
+                                <FaInstagram className='h-10 w-10 text-green-400' />
                             </Link>
                         </div>
                     </div>
