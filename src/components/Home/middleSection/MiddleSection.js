@@ -5,14 +5,14 @@ const MiddleSection = () => {
     return (
         <div>
             <div className="bg-green-400 text-gray-50 rounded">
-                <div className="container grid grid-cols-12  mx-auto bg-gray-900">
+                <div className="container grid grid-cols-12 mx-auto bg-gray-900">
                     <div className="bg-no-repeat bg-cover col-span-full lg:col-span-4" style={{ backgroundImage: " url('https://images.pexels.com/photos/590178/pexels-photo-590178.jpeg?auto=compress&cs=tinysrgb&w=600')", backgroundPosition: "center center", backgroundBlendMode: "multiply", backgroundSize: "cover" }}></div>
-                    <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
+                    <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8  lg:p-10">
 
                         <h1 className="text-3xl font-semibold">Be generous like Ocean</h1>
                         <p className="flex-1 pt-2"> <b>Underwater</b> photography is the process of taking photographs while under water. It is usually done while scuba diving, but can be done while diving on surface supply, snorkeling, swimming, from a submersible or remotely operated underwater vehicle, or from automated cameras lowered from the surface.</p>
                         <Link rel="noopener noreferrer" to='' className="no-underline inline-flex items-center pt-2 pb-6 space-x-2 text-sm dark:text-violet-400">
-                            <span>Read more</span>
+                            <button>Read more</button>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                                 <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                             </svg>

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-// import toast from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import { FaSmile } from 'react-icons/fa';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
@@ -17,32 +17,34 @@ const AddService = () => {
         const form = event.target;
         const title = form.title.value;
         const price = form.price.value;
+        const service_duration = form.duration.value;
         const img = form.url.value;
-        const details = form.details.value;
-        console.log(title, img, price, details);
+        const location_details = form.details.value;
 
-        // const service = {
-        //     title,
-        //     price,
-        //     img,
-        //     details
-        // }
+        const service = {
+            title,
+            price,
+            img,
+            location_details,
+            service_duration
+        }
 
-        //     fetch('https://wildlia-server.vercel.app/services', {
-        //         method: 'POST',
-        //         headers: {
-        //             'content-type': 'application/json'
-        //         },
-        //         body: JSON.stringify(service)
-        //     })
-        //         .then(res => res.json())
-        //         .then(data => {
-        //             if (data.acknowledged) {
-        //                 toast.success('Review added successfully')
-        //                 form.reset();
-        //             }
-        //         })
-        //         .catch(err => console.error(err))
+        fetch(' https://wildlia-server.vercel.app/services', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(service)
+        })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data)
+                if (data.acknowledged) {
+                    toast.success('Review added successfully')
+                    form.reset();
+                }
+            })
+            .catch(err => console.error(err))
 
     }
     return (
@@ -83,6 +85,7 @@ const AddService = () => {
                             </div>
                         </div>
                     </div>
+                    <Toaster />
                 </fieldset>
             </form>
         </section>

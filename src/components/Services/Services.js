@@ -43,7 +43,7 @@ const Services = () => {
 
                                 </h3>
 
-                                <p className="leading-snug text-gray-600 font-semibold">{srv.location_details.slice(0, 100) + '...'} <span><Link to={`/detail/${srv._id}`} className='no-underline text-green-900'>See More</Link></span></p>
+                                <p className="leading-snug text-gray-600 font-semibold">{srv.location_details.slice(0, 100) + '..'}<span><Link to={`/detail/${srv._id}`} className='no-underline text-green-900'>See More</Link></span></p>
                             </div>
                         </div>
                     </div>

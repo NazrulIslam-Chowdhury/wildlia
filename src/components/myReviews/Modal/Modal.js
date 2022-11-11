@@ -8,14 +8,14 @@ import { useLoaderData } from 'react-router-dom';
 const Modal = () => {
     // const storedReview = useLoaderData();
     const { loading } = useContext(AuthContext);
-    // const [userReview, setUserReview] = useState();
+    const [userReview, setUserReview] = useState();
 
-    // useEffect((id) => {
-    //     fetch(`http://localhost:5000/reviews/${id}`)
-    //         .then(res => console.log(res))
-    //         // .then(data => console.log(data))
-    //         .catch(err => console.log(err))
-    // }, [])
+    useEffect((id) => {
+        fetch(`http://localhost:5000/reviews/${id}`)
+            .then(res => console.log(res))
+            // .then(data => console.log(data))
+            .catch(err => console.log(err))
+    }, [])
 
     // const addUpdateReviewOnSubmit = (event) => {
     //     event.preventDefault();
@@ -24,7 +24,7 @@ const Modal = () => {
 
     //     console.log(newComment);
 
-    //     fetch(`http://localhost:5000/reviews/${storedReview._id}`, {
+    //     fetch(`http://localhost:5000/reviews/${id}`, {
     //         method: 'PUT',
     //         headers: {
     //             'content-type': 'application/json'
