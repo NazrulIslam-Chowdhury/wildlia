@@ -1,0 +1,12 @@
+#light {
+    background-color: rgba(220 252 231);
+}
+
+#dark {
+    background-color: #46045e;
+}
+
+#dark .navbar {
+    background-color: rgba(0, 0, 0, 0.315);
+    color: whitesmoke;
+}

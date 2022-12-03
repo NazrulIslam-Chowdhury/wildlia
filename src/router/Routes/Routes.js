@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, useParams } from "react-router-dom";
 import AddReview from "../../components/addReview/AddReview";
 import AddService from "../../components/addService/AddService";
 import Blog from "../../components/Blog/Blog";
@@ -56,12 +56,12 @@ const router = createBrowserRouter([
             },
             {
                 path: '/modal/:id',
-                // loader: ({ params }) => fetch(`http://localhost:5000/reviews/${params.id}`),
+                // loader: ({ params }) => fetch(`https://wildlia-server.vercel.app/reviews/${params.id}`),
                 element: <Modal></Modal>
             },
             {
                 path: '*',
-                element: <p>Page not found</p>
+                element: <p className="text-black text-center">Page not found</p>
             }
         ]
     }

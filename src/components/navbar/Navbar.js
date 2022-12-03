@@ -4,6 +4,7 @@ import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import '../../App.css';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -20,10 +21,10 @@ const Navbar = () => {
     }
     return (
         <div>
-            <CNavbar expand="lg" colorScheme="light" className="p-4 bg-green-200 text-gray-100">
+            <CNavbar expand="lg" colorScheme="light" className="navbar p-2 bg-green-200 text-gray-100">
                 <CContainer fluid>
                     <Link to='/' aria-label="Back to homepage" className="flex items-center p-2">
-                        <img className='w-28 h-28 rounded-full bg-green-300' src={logo} alt="" />
+                        <img className='w-20 h-20 rounded-full bg-green-300' src={logo} alt="" />
                     </Link>
                     <CNavbarToggler
                         aria-label="Toggle navigation"
