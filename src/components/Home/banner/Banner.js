@@ -15,8 +15,8 @@ const Banner = () => {
             className='flex items-center justify-center'>
             <div>
                 <h1 className='text-white font-serif text-5xl font-semibold tracking-wider'>Where will you go next ?</h1>
-                <p className='text-gray-100 text-xl tracking-tight font-serif'>Welcome to Wildlia, a tour guidance website carefully crafted for travelers and adventurers. <br /> Pack your bags, hit the road and don't forget to write down all of your amazing stories!</p>
-                <button className='font-serif px-5 py-3 text-gray-100 text-xl font-medium bg-teal-700 hover:bg-teal-600 rounded'>Contact Me</button>
+                <p className='text-gray-100 text-xl tracking-tight font-serif mt-3'>Welcome to Wildlia, a tour guidance website carefully crafted for travelers and adventurers. <br /> Pack your bags, hit the road and don't forget to write down all of your amazing stories!</p>
+                <button className='font-serif px-5 py-3 text-gray-100 text-xl font-medium bg-teal-700 hover:bg-teal-600 rounded mt-3'>Contact Me</button>
             </div>
         </div>
     );
