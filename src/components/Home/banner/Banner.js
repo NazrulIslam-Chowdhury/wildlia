@@ -1,41 +1,24 @@
-
 import React from 'react';
-import './Banner.css';
-import { CCarousel, CCarouselItem, CImage, CCarouselCaption } from '@coreui/react';
-import '@coreui/coreui/dist/css/coreui.min.css';
-// import { PhotoProvider, PhotoView } from 'react-photo-view';
-// import 'react-photo-view/dist/react-photo-view.css';
 
 
 const Banner = () => {
     return (
-
-        <div>
-            <CCarousel controls indicators>
-                <CCarouselItem className='h-96'>
-                    <div className='carousel-img'>
-
-                        <CImage className="d-block h-96  w-100  " src="https://upload.wikimedia.org/wikipedia/commons/2/23/Sundarban_Tiger.jpg" alt="slide 1" />
-
-                    </div>
-                </CCarouselItem>
-                <CCarouselItem className='h-96'>
-                    <div className='carousel-img'>
-
-                        <CImage className="carousel-img d-block h-96 w-100" src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Bhawal_National_Park_02.jpg" alt="slide 2" />
-
-                    </div>
-                </CCarouselItem>
-                <CCarouselItem className='h-96'>
-                    <div className='carousel-img'>
-
-                        <CImage className="carousel-img d-block h-96 w-100" src="https://www.lostwithpurpose.com/wp-content/uploads/2018/03/DSC04371.jpg" alt="slide 3" />
-
-                    </div>
-                </CCarouselItem>
-            </CCarousel>
+        <div style={{
+            backgroundImage: "url(https://photographylife.com/wp-content/uploads/2019/04/B07.jpg)",
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            width: 'auto',
+            height: '100vh',
+            filter: "brightness(80%)"
+        }}
+            className='flex items-center justify-center'>
+            <div>
+                <h1 className='text-white font-serif text-5xl font-semibold tracking-wider'>Where will you go next ?</h1>
+                <p className='text-gray-100 text-xl tracking-tight font-serif'>Welcome to Wildlia, a tour guidance website carefully crafted for travelers and adventurers. <br /> Pack your bags, hit the road and don't forget to write down all of your amazing stories!</p>
+                <button className='font-serif px-5 py-3 text-gray-100 text-xl font-medium bg-teal-700 hover:bg-teal-600 rounded'>Contact Me</button>
+            </div>
         </div>
-
     );
 };
 

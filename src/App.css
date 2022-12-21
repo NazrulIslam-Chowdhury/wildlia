@@ -1,5 +1,5 @@
-#light {
-    background-color: rgba(220 252 231);
+/* #light {
+    background-color: #6ACFC7;
 }
 
 #dark {
@@ -9,4 +9,8 @@
 #dark .navbar {
     background-color: rgba(0, 0, 0, 0.315);
     color: whitesmoke;
+} */
+
+.font {
+    font-family: 'Playfair Display', sans-serif;
 }

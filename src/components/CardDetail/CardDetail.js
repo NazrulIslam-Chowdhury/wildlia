@@ -34,7 +34,7 @@ const CardDetail = () => {
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-x-7 sm:gap-y-8'>
 
                 <div className=' grid-cols-1'>
-                    <div className="max-w-lg p-4 shadow-xl shadow-black bg-green-200 text-gray-900 rounded h-auto ">
+                    <div className="max-w-lg p-4 shadow-xl shadow-black bg-teal-700 rounded h-auto ">
 
                         <div className="space-y-4">
                             <div className="space-y-2">
@@ -45,10 +45,10 @@ const CardDetail = () => {
                                 </PhotoProvider>
                             </div>
                             <div className="space-y-2">
-                                <h3 className="text-2xl font-semibold text-green-800">{title}
+                                <h3 className="text-2xl font-semibold font text-gray-300">{title}
                                 </h3>
-                                <p><span>Service Duration:</span>{service_duration}</p>
-                                <p><span>Price: $</span>{price}</p>
+                                <p className='font text-gray-300'><span>Service Duration:</span>{service_duration}</p>
+                                <p className='text-gray-300 font'><span>Price: $</span>{price}</p>
                                 <div className='flex items-center'>
                                     <FaStar className='text-yellow-600' />
                                     <FaStar className='text-yellow-600' />
@@ -62,8 +62,8 @@ const CardDetail = () => {
                         <div className='flex items-center'>
                             <img className='h-16 w-16 rounded-full' src={guidImg} alt="" />
                             <div className='ml-5'>
-                                <p className='text-lg'>Nazrul Islam Chowdhury</p>
-                                <small>Professional tour guide</small>
+                                <p className='text-lg font text-gray-300'>Nazrul Islam Chowdhury</p>
+                                <small className='text-gray-300 font'>Professional tour guide</small>
                             </div>
                         </div>
                     </div>
@@ -71,18 +71,18 @@ const CardDetail = () => {
 
                 <div className='mt-5 col-span-2'>
                     <div>
-                        <p>{
+                        <p className='font text-gray-300'>{
                             location_details}</p>
                     </div>
                 </div>
 
                 {
                     user?.uid ?
-                        <button className="bg-green-400  hover:bg-green-600 py-2 rounded "><Link className='no-underline font-semibold px-4 text-black text-lg' to='/add-review' active>
+                        <button className="bg-teal-800  hover:bg-teal-700 py-2 rounded "><Link className='no-underline font-semibold font px-4 text-gray-300 text-lg' to='/add-review' active>
                             Add a review
                         </Link></button>
                         :
-                        <button className="bg-green-400  hover:bg-green-600 py-2 rounded "><Link className='no-underline font-semibold px-4 text-black text-lg' to='/add-review' active>
+                        <button className="bg-teal-800 hover:bg-teal-700 font py-2 rounded "><Link className='no-underline font-semibold px-4 text-gray-300 text-lg' to='/add-review' active>
                             Login to add a review
                         </Link></button>
                 }
@@ -91,7 +91,7 @@ const CardDetail = () => {
 
             {
                 user?.uid ?
-                    <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5  p-8 rounded mt-5'>
+                    <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 mx-4 rounded mt-8'>
                         {
                             reviews.map(review =>
                                 <div key={review._id} className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 bg-gray-900 text-gray-100 shadow-md shadow-black">
@@ -101,8 +101,8 @@ const CardDetail = () => {
                                                 <img src={review.userImg} alt="" className="object-cover w-12 h-12 rounded-full bg-gray-500" />
                                             </div>
                                             <div>
-                                                <h4 className="font-bold">{review.name}</h4>
-                                                <span className="text-xs text-gray-400">{review.email}</span>
+                                                <h4 className="font-bold text-gray font">{review.name}</h4>
+                                                <span className="text-xs text-gray-300 font">{review.email}</span>
                                             </div>
                                         </div>
                                         <div className="flex items-center space-x-2 text-yellow-500">
@@ -112,7 +112,7 @@ const CardDetail = () => {
                                             <span className="text-xl font-bold">4.5</span>
                                         </div>
                                     </div>
-                                    <div className="p-4 space-y-2 text-sm text-gray-400">
+                                    <div className="p-4 space-y-2 text-sm text-gray-300 font">
                                         <p>{review.comment}</p>
                                     </div>
                                 </div>

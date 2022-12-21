@@ -1,5 +1,4 @@
-import { CCollapse, CContainer, CNavbar, CNavbarNav, CNavbarToggler, CNavItem } from '@coreui/react';
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
@@ -8,7 +7,6 @@ import '../../App.css';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    const [visible, setVisible] = useState(false);
 
     const logOutOnClick = () => {
         logOut()
@@ -21,64 +19,88 @@ const Navbar = () => {
     }
     return (
         <div>
-            <CNavbar expand="lg" colorScheme="light" className="navbar p-2 bg-green-200 text-gray-100">
-                <CContainer fluid>
-                    <Link to='/' aria-label="Back to homepage" className="flex items-center p-2">
-                        <img className='w-20 h-20 rounded-full bg-green-300' src={logo} alt="" />
-                    </Link>
-                    <CNavbarToggler
-                        aria-label="Toggle navigation"
-                        aria-expanded={visible}
-                        onClick={() => setVisible(!visible)}
-                    />
-                    <CCollapse className="navbar-collapse" visible={visible}>
-                        <CNavbarNav className='items-center'>
-                            <CNavItem>
-                                <Link className='no-underline cursor-pointer font-semibold px-4 
-                               py-2 text-black text-lg hover:bg-green-400 rounded' to='/' active>
-                                    Home
-                                </Link>
-                            </CNavItem>
-                            <CNavItem>
-                                <Link className='no-underline  cursor-pointer font-semibold py-2 px-4 text-black text-lg hover:bg-green-400 rounded' to='/blog' active>Blog</Link>
-                            </CNavItem>
-                            <CNavItem>
-                                <Link className='no-underline  cursor-pointer font-semibold py-2 px-4 text-black text-lg hover:bg-green-400 rounded' to='/services' active>Services</Link>
-                            </CNavItem>
-                            <CNavItem>
-
+            <div className="navbar bg-gradient-to-t from-teal-800 to-black">
+                <div className="navbar-start">
+                    <div className="dropdown w-auto">
+                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </label>
+                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-gradient-to-t from-teal-800 to-black rounded-box w-auto">
+                            <li><Link className='px-4 
+                               py-2 text-gray-300 text-lg hover:bg-teal-500 hover:text-black font' to='/' active>
+                                Home
+                            </Link></li>
+                            <li><Link className=' font py-2 px-4 text-gray-300 text-lg hover:bg-teal-500 hover:text-black' to='/blog' active>Blog</Link></li>
+                            <li><Link className='py-2 px-4 text-gray-300 text-lg hover:bg-teal-500 hover:text-black font' to='/services' active>Services</Link></li>
+                            <li>
                                 {
-                                    user?.uid ?
-                                        <>
-                                            <Link className='no-underline  cursor-pointer font-semibold py-2 px-4 text-black text-lg hover:bg-green-400 rounded' to='/my-reviews' active>My Reviews</Link>
+                                    user?.uid &&
+                                    <>
+                                        <Link className=' font py-2 px-4 text-gray-300 text-lg hover:bg-teal-500 hover:text-black' to='/my-reviews' active>My Reviews</Link>
 
-                                            <Link className='no-underline  cursor-pointer font-semibold py-2 px-4 text-black text-lg hover:bg-green-400 rounded' to='/add-service' active>Add Service</Link>
-                                            <button onClick={logOutOnClick} className="bg-green-400  hover:bg-green-600 py-2 font-semibold px-4 text-black text-lg rounded">Log Out</button>
-
-
-                                        </>
-                                        :
-                                        <button className="bg-green-400  hover:bg-green-600 py-2 rounded "><Link className='no-underline font-semibold px-4 text-black text-lg' to='/login' active>
-                                            Login
-                                        </Link></button>
-
+                                        <Link className=' font py-2 px-4 text-gray-300 text-lg hover:bg-teal-500 hover:text-black ' to='/add-service' active>Add Service</Link>
+                                    </>
                                 }
+                            </li>
+                            <li>
+                                <div className='flex items-center flex-wrap'>
+                                    <img src={user?.photoURL} className='h-10 font w-10 rounded-full' alt="" />
+                                    <div className=' text-gray-300 font'>
+                                        <p>{user?.displayName}</p>
+                                        <p className='mr-1'>{user?.email}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <Link to='/' className='flex items-center'>
+                        <img className='w-20 h-20 rounded-full' src={logo} alt="" />
+                    </Link>
+                </div>
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal px-1">
+                        <li><Link className='px-4 
+                               py-2 text-gray-300 text-lg hover:bg-teal-500 hover:text-black font' to='/' active>
+                            Home
+                        </Link></li>
+                        <li><Link className=' font py-2 px-4 text-gray-300 text-lg hover:bg-teal-500 hover:text-black' to='/blog' active>Blog</Link></li>
+                        <li><Link className='py-2 px-4 text-gray-300 text-lg hover:bg-teal-500 hover:text-black font' to='/services' active>Services</Link></li>
+                        <li>
+                            {
+                                user?.uid &&
+                                <>
+                                    <Link className=' font py-2 px-4 text-gray-300 text-lg hover:bg-teal-500 hover:text-black' to='/my-reviews' active>My Reviews</Link>
 
-                            </CNavItem>
-                        </CNavbarNav>
-                    </CCollapse>
-                    <div
-                        className='flex'>
-                        <img src={user?.photoURL} className='h-16 w-16 rounded-full' alt="" />
-                        <div className='ml-2 text-black h-6'>
-                            <p>{user?.displayName}</p>
+                                    <Link className=' font py-2 px-4 text-gray-300 text-lg hover:bg-teal-500 hover:text-black ' to='/add-service' active>Add Service</Link>
+                                </>
+                            }
+                        </li>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
+                <div className="navbar-end">
+                    <div className='hidden items-center lg:flex md:flex mr-4'>
+                        <img src={user?.photoURL} className='h-10 font w-10 rounded-full' alt="" />
+                        <div className='ml-2 text-gray-300 font'>
+                            <p className='lg:block md:block sm:hidden'>{user?.displayName}</p>
                             <p>{user?.email}</p>
                         </div>
                     </div>
-                </CContainer>
-            </CNavbar>
+                    {
+                        user?.uid ?
+                            <button onClick={logOutOnClick} className="bg-teal-800  hover:bg-teal-500 hover:text-black py-2 font px-4 text-gray-300 text-lg rounded">Log Out</button>
+                            :
+                            <button className="bg-teal-800  hover:bg-teal-500 hover:text-black py-2 rounded "><Link className='font px-4 text-gray-300 text-lg' to='/login' active>
+                                Login
+                            </Link></button>
 
+                    }
+                </div>
+            </div>
         </div>
+
     );
 };
 

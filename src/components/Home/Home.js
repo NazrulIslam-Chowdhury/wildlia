@@ -12,18 +12,18 @@ const Home = () => {
     useTitle('Home');
 
     if (loading) {
-        return <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-green-600 font-bold ml-96"></div>
+        return <div className='flex justify-center'><div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-teal-700 font-bold"></div></div>
     }
     return (
         <div className='text-center'>
             <Banner></Banner>
-            <div className='mt-5'>
+            <div className='mt-10'>
                 <LimitedServices></LimitedServices>
             </div>
-            <button className='bg-green-400 hover:bg-green-600 rounded px-5 py-2 mt-5 shadow-lg shadow-black'>
-                <Link to='/services' className='no-underline text-black text-lg font-bold'>See All</Link>
+            <button className='bg-teal-800 hover:bg-teal-700 rounded px-7 py-2 mt-10 shadow-lg shadow-black'>
+                <Link to='/services' className='no-underline hover:text-gray-200 text-gray-200 text-lg font-semibold font'>See All</Link>
             </button>
-            <div className='mt-5'>
+            <div className='mt-10'>
                 <MiddleSection></MiddleSection>
             </div>
         </div>
