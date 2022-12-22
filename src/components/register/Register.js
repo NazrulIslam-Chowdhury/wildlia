@@ -68,19 +68,19 @@ const Register = () => {
                 <form onSubmit={handleSignUpOnSubmit} action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="space-y-1 text-sm">
                         <label className="block text-gray-300 font">Name</label>
-                        <input type="text" name="name" placeholder="name" className="w-full px-4 py-3 rounded-md  text-black " required />
+                        <input type="text" name="name" placeholder="name" className="bg-gray-300 w-full px-4 py-3 rounded-md  text-black " required />
                     </div>
                     <div className="space-y-1 text-sm">
                         <label className="block text-gray-300 font">Photo URL</label>
-                        <input type="text" name="photoURL" placeholder="url" className="w-full px-4 py-3 rounded-md  text-black " />
+                        <input type="text" name="photoURL" placeholder="url" className="bg-gray-300 w-full px-4 py-3 rounded-md  text-black " />
                     </div>
                     <div className="space-y-1 text-sm">
                         <label className="block text-gray-300 font">Email</label>
-                        <input type="email" name="email" placeholder="email" className="w-full px-4 py-3 rounded-md  text-black " required />
+                        <input type="email" name="email" placeholder="email" className="bg-gray-300 w-full px-4 py-3 rounded-md  text-black " required />
                     </div>
                     <div className="space-y-1 text-sm">
                         <label className="block text-gray-300 font">Password</label>
-                        <input type="password" name="password" placeholder="Password" className="w-full px-4 py-3 rounded-md  text-gray-900 " required />
+                        <input type="password" name="password" placeholder="Password" className="bg-gray-300 w-full px-4 py-3 rounded-md  text-gray-900 " required />
 
                     </div>
                     <div className="space-y-1 text-sm">
