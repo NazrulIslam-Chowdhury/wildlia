@@ -7,6 +7,7 @@ import Banner from './banner/Banner';
 import LimitedServices from './limitedServices/LimitedServices';
 import MiddleSection from './middleSection/MiddleSection';
 import MoreDestination from './MoreDestination';
+import Reviews from './Reviews';
 
 const Home = () => {
     const { loading } = useContext(AuthContext);
@@ -29,6 +30,9 @@ const Home = () => {
             </div>
             <div>
                 <MoreDestination />
+            </div>
+            <div>
+                <Reviews />
             </div>
         </div>
     );

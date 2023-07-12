@@ -7,10 +7,10 @@ import { BsStarFill, BsStarHalf } from "react-icons/bs";
 const MoreDestination = () => {
 
     return (
-        <div className='p-20 space-y-20'>
-            <div className='flex flex-col gap-6 flex-wrap'>
-                <h3 className='font1 text-white sm:text-6xl text-4xl font-bold text-center'>Go Wild</h3>
-                <h1 className='text-white sm:text-7xl text-5xl font-extrabold text-center '>More Destinations</h1>
+        <div className='p-20 sm:space-y-20 space-y-16'>
+            <div className='flex flex-col gap-6'>
+                <h3 className='font1 text-white sm:text-6xl text-3xl font-bold'>Go Wild With</h3>
+                <h1 className='text-white sm:text-7xl text-4xl font-extrabold'>More Destinations</h1>
                 <p className={`text-center `}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestias at porro excepturi neque deserunt.</p>
             </div>
             <div className={`flex gap-10 flex-wrap justify-center `}>
