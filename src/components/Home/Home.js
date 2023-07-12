@@ -6,6 +6,7 @@ import useTitle from '../../hooks/useTitle';
 import Banner from './banner/Banner';
 import LimitedServices from './limitedServices/LimitedServices';
 import MiddleSection from './middleSection/MiddleSection';
+import MoreDestination from './MoreDestination';
 
 const Home = () => {
     const { loading } = useContext(AuthContext);
@@ -25,6 +26,9 @@ const Home = () => {
             </button>
             <div className='mt-10'>
                 <MiddleSection></MiddleSection>
+            </div>
+            <div>
+                <MoreDestination />
             </div>
         </div>
     );
