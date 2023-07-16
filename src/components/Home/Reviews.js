@@ -29,12 +29,12 @@ const Reviews = () => {
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
-                className="mySwiper"
+                className="mySwiper bg-teal-800 bg-opacity-[0.8] px-8 py-20 cursor-grab"
             >
                 {
                     reviews.map((review, idx) => (
-                        <SwiperSlide className='sm:px-52 px-0 py-28'>
-                            <div className='bg-teal-800 bg-opacity-[0.8] flex flex-col gap-7 items-center justify-center px-8 py-20 cursor-grab'>
+                        <SwiperSlide className='sm:px-52 px-0 py-28' key={idx}>
+                            <div className='flex flex-col gap-7 items-center justify-center '>
                                 <RiDoubleQuotesL className='w-20 h-20 text-amber-500' />
                                 <div className='space-y-3'>
                                     <h1 className='sm:text-4xl text-2xl text-white font-bold'>{review.title}</h1>

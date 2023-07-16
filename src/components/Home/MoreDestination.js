@@ -13,7 +13,7 @@ const MoreDestination = () => {
                 <h1 className='text-white sm:text-7xl text-4xl font-extrabold'>More Destinations</h1>
                 <p className={`text-center `}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestias at porro excepturi neque deserunt.</p>
             </div>
-            <div className={`flex gap-10 flex-wrap justify-center `}>
+            <div className='flex gap-10 flex-wrap justify-center'>
                 {
                     moreDestinations.map((destination, idx) => (
                         <div>
@@ -47,7 +47,6 @@ const MoreDestination = () => {
                                 </div>
 
                             </div>
-
                         </div>
                     ))
                 }

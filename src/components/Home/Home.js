@@ -8,6 +8,7 @@ import LimitedServices from './limitedServices/LimitedServices';
 import MiddleSection from './middleSection/MiddleSection';
 import MoreDestination from './MoreDestination';
 import Reviews from './Reviews';
+import Popular from './Popular';
 
 const Home = () => {
     const { loading } = useContext(AuthContext);
@@ -33,6 +34,9 @@ const Home = () => {
             </div>
             <div>
                 <Reviews />
+            </div>
+            <div>
+                <Popular />
             </div>
         </div>
     );

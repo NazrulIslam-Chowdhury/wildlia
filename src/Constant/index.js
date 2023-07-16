@@ -7,10 +7,14 @@ import rome from "../assets/rome.jpg";
 
 import men1 from "../assets/peoples/man2.jpg";
 import men2 from "../assets/peoples/man3.jpg";
-
 import women1 from "../assets/peoples/women1.jpg";
 import women2 from "../assets/peoples/women3.jpg";
 
+import atv from "../assets/feature/ATV.jpg";
+import yacht from "../assets/feature/Yacht.jpg";
+import scuba from "../assets/feature/Scuba.jpg";
+import paragliding from "../assets/feature/Paragliding.jpg";
+import horseRiding from "../assets/feature/Horseriding.jpg";
 
 const moreDestinations = [
     {
@@ -82,4 +86,42 @@ const reviews = [
     }
 ]
 
-export { moreDestinations, reviews };
+const popular = [
+    {
+        "title": "ATV",
+        "image": atv,
+        "detail": "Where you will receive a safety briefing about how to operate your ATV and where friendly.",
+        "rating": "8.8",
+        "price": "$ 125"
+    },
+    {
+        "title": "Yacht Excursion",
+        "image": yacht,
+        "detail": "Swim with manta rays and walk with Komodo dragons in the world-famous Komodo National Park.",
+        "rating": "9.5",
+        "price": "$ 450"
+    },
+    {
+        "title": "Scuba Diving",
+        "image": scuba,
+        "detail": "We invite you dive the coastline first discovered by Columbus by Dressel Divers. You can’t help feeling shipwreck.",
+        "rating": "9.2",
+        "price": "$ 150"
+    },
+    {
+        "title": "Paragliding",
+        "image": paragliding,
+        "detail": "Caribbean’s highest mountain ranges, tucked in the heart of the country, where you’ll find the lushest.",
+        "rating": "8.5",
+        "price": "$ 110"
+    },
+    {
+        "title": "Horse Riding",
+        "image": horseRiding,
+        "detail": "Hop on a guided horseback ride around Constanza’s gorgeous valleys and villages. Routes offered include.",
+        "rating": "9.5",
+        "price": "$ 130"
+    },
+]
+
+export { moreDestinations, reviews, popular };
