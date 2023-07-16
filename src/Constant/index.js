@@ -16,6 +16,11 @@ import scuba from "../assets/feature/Scuba.jpg";
 import paragliding from "../assets/feature/Paragliding.jpg";
 import horseRiding from "../assets/feature/Horseriding.jpg";
 
+import blog1 from "../assets/blogs-thumb-1.jpg";
+import blog2 from "../assets/blogs-thumb-2.jpg";
+import blog3 from "../assets/blogs-thumb-3.jpg";
+
+
 const moreDestinations = [
     {
         "name": "New York",
@@ -124,4 +129,25 @@ const popular = [
     },
 ]
 
-export { moreDestinations, reviews, popular };
+const blogs = [
+    {
+        "title": "The Best Helicopter Tours",
+        "image": blog1,
+        "detail": "We love to see you live an exciting, unique and unforgettable experience.",
+        "date": "19 Jun"
+    },
+    {
+        "title": "The Cruise Line Rankings",
+        "image": blog2,
+        "detail": "The group of highly trained certified personnel for each attraction.",
+        "date": "12 Jun"
+    },
+    {
+        "title": "Best Romantic Gateways",
+        "image": blog3,
+        "detail": "Your satisfaction with your experience that your recommendation.",
+        "date": "15 Jun"
+    },
+]
+
+export { moreDestinations, reviews, popular, blogs };

@@ -17,8 +17,7 @@ const Video = () => {
                 strength={600}
                 className='flex items-center justify-center py-36'
             >
-                <iframe width="1200" height="600" src="https://www.youtube.com/embed/cYOP2qzv8FA?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen
-                    className=' '
+                <iframe width="1200" height="600" src="https://www.youtube.com/embed/cYOP2qzv8FA?start=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" allowFullScreen
                 ></iframe>
             </Parallax>
         </div>

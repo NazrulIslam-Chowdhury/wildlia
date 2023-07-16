@@ -10,6 +10,7 @@ import MoreDestination from './MoreDestination';
 import Reviews from './Reviews';
 import Popular from './Popular';
 import Video from './Video';
+import Blog from './Blog';
 
 const Home = () => {
     const { loading } = useContext(AuthContext);
@@ -41,6 +42,9 @@ const Home = () => {
             </div>
             <div>
                 <Video />
+            </div>
+            <div>
+                <Blog />
             </div>
         </div>
     );

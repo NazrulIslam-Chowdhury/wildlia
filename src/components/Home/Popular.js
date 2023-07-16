@@ -33,7 +33,7 @@ const Popular = () => {
                     }}
 
                     autoplay={{
-                        delay: 2500,
+                        delay: 2800,
                         disableOnInteraction: false
                     }}
                     modules={[Pagination, Autoplay]}
