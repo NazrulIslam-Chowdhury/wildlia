@@ -20,6 +20,10 @@ import blog1 from "../assets/blogs-thumb-1.jpg";
 import blog2 from "../assets/blogs-thumb-2.jpg";
 import blog3 from "../assets/blogs-thumb-3.jpg";
 
+import scubaMask from '../assets/scuba.png';
+import paraglidingIcon from '../assets/paragliding.png';
+import cycling from '../assets/cycling.png';
+import atvIcon from "../assets/atv.png";
 
 const moreDestinations = [
     {
@@ -150,4 +154,50 @@ const blogs = [
     },
 ]
 
-export { moreDestinations, reviews, popular, blogs };
+const banner = [
+    {
+        "image": canada,
+        "title": "escape life for a little while",
+        "semi-title": "Find Your Passion"
+    },
+    {
+        "image": greece,
+        "title": "a more rewarding way to travel",
+        "semi-title": "Find Your Passion"
+    },
+    {
+        "image": hawaii,
+        "title": "collecting memories every time",
+        "semi-title": "be an adventurer"
+    },
+    {
+        "image": rome,
+        "title": "a real adventure is out there",
+        "semi-title": "commit to travel"
+    },
+]
+
+const features = [
+    {
+        "icon": scubaMask,
+        "name": "Scuba Diving",
+        "detail": "Adrenaline-pumping excursions for the experienced."
+    },
+    {
+        "icon": paraglidingIcon,
+        "name": "Paragliding",
+        "detail": "Wild landscapes and rough rivers and you will rafting."
+    },
+    {
+        "icon": atvIcon,
+        "name": "ATV",
+        "detail": "Start your engines and get ready for an adventure"
+    },
+    {
+        "icon": cycling,
+        "name": "Cycling",
+        "detail": "Thrilling off-road experience public roads maximum security."
+    },
+]
+
+export { moreDestinations, reviews, popular, blogs, banner, features };

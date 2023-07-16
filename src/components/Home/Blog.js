@@ -18,7 +18,7 @@ const Blog = () => {
                                 <img
                                     src={blog.image}
                                     alt={blog.title}
-                                    className='hover:grayscale-[50%] cursor-pointer w-full'
+                                    className='hover:grayscale-[50%] cursor-pointer sm:w-[260px] w-[320px]'
                                 />
                                 <div className='flex flex-col items-start gap-4'>
                                     <h3 className='text-2xl text-white font-semibold text-start'>{blog.title}</h3>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const MiddleSection = () => {
     return (
-        <div>
+        <div className='py-20'>
             <div className="bg-teal-700 text-gray-50 rounded">
                 <div className="container grid grid-cols-12 mx-auto bg-gray-900">
                     <div className="bg-no-repeat bg-cover col-span-full lg:col-span-4" style={{ backgroundImage: " url('https://images.pexels.com/photos/590178/pexels-photo-590178.jpeg?auto=compress&cs=tinysrgb&w=600')", backgroundPosition: "center center", backgroundBlendMode: "multiply", backgroundSize: "cover" }}></div>
