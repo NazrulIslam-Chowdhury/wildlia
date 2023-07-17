@@ -16,8 +16,8 @@ const MoreDestination = () => {
             <div className='flex gap-10 flex-wrap justify-center'>
                 {
                     moreDestinations.map((destination, idx) => (
-                        <div>
-                            <div className='w-[350px] h-[350px] overflow-hidden relative '>
+                        <div key={idx}>
+                            <div className='w-[350px] h-[400px] overflow-hidden relative '>
                                 <PhotoProvider>
                                     <PhotoView src={destination.image}>
                                         <img

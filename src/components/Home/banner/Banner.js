@@ -33,7 +33,7 @@ const Banner = () => {
                                 loading='lazy'
                                 className='w-[100vw] h-[100vh] object-cover brightness-[0.60]'
                             />
-                            <div className='absolute sm:bottom-60 sm:left-60 left-0 bottom-72 space-y-3'>
+                            <div className='absolute sm:bottom-80 sm:left-60 left-0 bottom-96 space-y-3'>
                                 <h3 className='uppercase text-sky-400 text-2xl font-semibold'>{b['semi-title']}</h3>
                                 <h1 className='uppercase sm:text-6xl text-5xl text-center text-white font-extrabold px-[10%]'>{b.title}</h1>
                             </div>
