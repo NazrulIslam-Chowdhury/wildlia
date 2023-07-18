@@ -55,37 +55,6 @@ const LimitedServices = () => {
                             </div>
                         </div>
 
-
-                        // <div key={service._id} className="max-w-lg p-4 shadow-xl shadow-black bg-teal-700 text-gray-900 rounded">
-                        //     <div className="flex justify-between pb-4 border-bottom">
-                        //         <Link className='no-underline text-gray-300 font' to={`/detail/${service._id}`}>See Detail</Link>
-                        //     </div>
-                        //     <div className="space-y-4">
-                        //         <div className="space-y-2 ">
-                        //             <div className='w-[full] h-[288px] overflow-hidden'>
-                        //                 <PhotoProvider>
-                        //                     <PhotoView src={service.img}>
-                        //                         <img src={service.img} alt="" className=" block object-cover w-full h-full transition-transform duration-[2s] hover:scale-125 rounded-md dark:bg-gray-500 cursor-pointer " />
-                        //                     </PhotoView>
-                        //                 </PhotoProvider>
-                        //             </div>
-
-                        //             <div className="flex items-center text-xs font text-gray-300">
-                        //                 <span>6 min ago</span>
-                        //             </div>
-                        //         </div>
-                        //         <div className="space-y-2">
-
-                        //             <h3 className="text-2xl font-semibold text-gray-300 font">{service.title}
-
-                        //             </h3>
-
-                        //             <p className="leading-snug text-gray-300 font-semibold font">{service.location_details.slice(0, 100) + '...'} <span><Link to={`/detail/${service._id}`} className='no-underline text-green-900'>See More</Link></span></p>
-                        //             <p className='font text-gray-300'>price: ${service.price}</p>
-                        //         </div>
-                        //     </div>
-                        // </div>
-
                     )
                 }
             </div>

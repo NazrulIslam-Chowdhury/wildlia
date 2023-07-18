@@ -24,7 +24,7 @@ const MoreDestination = () => {
                                             src={destination.image}
                                             alt={destination.name}
                                             loading='lazy'
-                                            className='w-full h-full hover:scale-125 duration-[2s] cursor-pointer absolute'
+                                            className='w-full h-full hover:scale-125 duration-[2s] cursor-pointer absolute object-cover'
                                         />
                                     </PhotoView>
                                 </PhotoProvider>
